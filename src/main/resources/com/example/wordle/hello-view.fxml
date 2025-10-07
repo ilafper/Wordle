@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.592964824120603" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.funciones">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <SplitPane dividerPositions="0.6153846153846154" layoutX="-2.0" layoutY="-1.0" prefHeight="233.0" prefWidth="600.0" stylesheets="@estilo.css">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <TextField fx:id="palabra1letra1" alignment="CENTER" editable="false" layoutX="78.0" layoutY="75.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra4letra1" alignment="CENTER" editable="false" layoutX="78.0" layoutY="168.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra3letra1" alignment="CENTER" editable="false" layoutX="78.0" layoutY="137.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra2letra1" alignment="CENTER" editable="false" layoutX="78.0" layoutY="106.0" prefHeight="31.0" prefWidth="35.0" />
+
+                                <TextField fx:id="palabra1letra2" alignment="CENTER" editable="false" layoutX="118.0" layoutY="75.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra4letra2" alignment="CENTER" editable="false" layoutX="118.0" layoutY="168.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra3letra2" alignment="CENTER" editable="false" layoutX="118.0" layoutY="137.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra2letra2" alignment="CENTER" editable="false" layoutX="118.0" layoutY="106.0" prefHeight="31.0" prefWidth="35.0" />
+
+                                <TextField fx:id="palabra1letra3" alignment="CENTER" editable="false" layoutX="159.0" layoutY="75.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra4letra3" alignment="CENTER" editable="false" layoutX="159.0" layoutY="168.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra3letra3" alignment="CENTER" editable="false" layoutX="159.0" layoutY="137.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra2letra3" alignment="CENTER" editable="false" layoutX="159.0" layoutY="106.0" prefHeight="31.0" prefWidth="35.0" />
+
+                                <TextField fx:id="palabra1letra4" alignment="CENTER" editable="false" layoutX="200.0" layoutY="75.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra4letra4" alignment="CENTER" editable="false" layoutX="200.0" layoutY="168.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra3letra4" alignment="CENTER" editable="false" layoutX="200.0" layoutY="137.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra2letra4" alignment="CENTER" editable="false" layoutX="200.0" layoutY="106.0" prefHeight="31.0" prefWidth="35.0" />
+
+                                <TextField fx:id="palabra1letra5" alignment="CENTER" editable="false" layoutX="240.0" layoutY="75.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra4letra5" alignment="CENTER" editable="false" layoutX="240.0" layoutY="168.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra3letra5" alignment="CENTER" editable="false" layoutX="240.0" layoutY="137.0" prefHeight="31.0" prefWidth="35.0" />
+                                <TextField fx:id="palabra2letra5" alignment="CENTER" editable="false" layoutX="240.0" layoutY="106.0" prefHeight="31.0" prefWidth="35.0" />
+
+                                <TextField id="segundo" fx:id="input2" alignment="CENTER" editable="false" layoutX="102.0" layoutY="29.0" prefHeight="31.0" prefWidth="45.0" />
+                                <TextField id="primer" fx:id="input1" alignment="CENTER" editable="false" layoutX="50.0" layoutY="29.0" prefHeight="31.0" prefWidth="45.0" />
+                                <TextField id="tercero" fx:id="input3" alignment="CENTER" editable="false" layoutX="155.0" layoutY="29.0" prefHeight="31.0" prefWidth="45.0" />
+                                <TextField id="cuarto" fx:id="input4" alignment="CENTER" editable="false" layoutX="206.0" layoutY="29.0" prefHeight="31.0" prefWidth="45.0" />
+                                <TextField id="quinto" fx:id="input5" alignment="CENTER" editable="false" layoutX="259.0" layoutY="29.0" prefHeight="31.0" prefWidth="45.0" />
+                            </children></AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <TextField layoutX="35.0" layoutY="14.0" prefHeight="31.0" prefWidth="157.0" text="ESTADISTICAS:" />
+                                <Label layoutX="26.0" layoutY="68.0" prefHeight="25.0" prefWidth="99.0" text="Partidas Juagadas:" textAlignment="CENTER" />
+                                <Label layoutX="26.0" layoutY="93.0" prefHeight="25.0" prefWidth="62.0" text="Ganadas:" textAlignment="CENTER" />
+                                <Label layoutX="26.0" layoutY="118.0" prefHeight="25.0" prefWidth="53.0" text="Perdidas:" textAlignment="CENTER" />
+                            </children></AnchorPane>
+                    </items>
+                </SplitPane>
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <Button id="botonQ" fx:id="botonQ" layoutX="155.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="Q" />
+                <Button id="botonU" fx:id="botonU" layoutX="335.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="U" />
+                <Button id="botonW" fx:id="botonW" layoutX="185.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="W" />
+                <Button id="botonY" fx:id="botonY" layoutX="305.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="Y" />
+                <Button id="botonI" fx:id="botonI" layoutX="365.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="I" />
+                <Button id="botonT" fx:id="botonT" layoutX="275.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="T" />
+                <Button id="botonE" fx:id="botonE" layoutX="215.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="E" />
+                <Button id="botonR" fx:id="botonR" layoutX="245.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="R" />
+                <Button id="botonP" fx:id="botonP" layoutX="426.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" text="P" />
+                <Button id="botonO" fx:id="botonO" layoutX="393.0" layoutY="28.0" mnemonicParsing="false" onAction="#manejarLetra" prefHeight="25.0" prefWidth="28.0" text="O" />
+
+                <Button id="botonA" fx:id="botonA" layoutX="155.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="A" />
+                <Button id="botonJ" fx:id="botonJ" layoutX="335.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="J" />
+                <Button id="botonS" fx:id="botonS" layoutX="185.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="S" />
+                <Button id="botonH" fx:id="botonH" layoutX="305.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="H" />
+                <Button id="botonK" fx:id="botonK" layoutX="365.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="K" />
+                <Button id="botonG" fx:id="botonG" layoutX="275.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="G" />
+                <Button id="botonD" fx:id="botonD" layoutX="215.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="D" />
+                <Button id="botonF" fx:id="botonF" layoutX="245.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="F" />
+                <Button id="botonÑ" fx:id="botonÑ" layoutX="426.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="Ñ" />
+                <Button id="botonL" fx:id="botonL" layoutX="395.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="L" />
+
+                <Button id="botonAceptar" fx:id="botonAceptar" layoutX="134.0" layoutY="90.0" mnemonicParsing="false" onAction="#aceptarBoton" text="ACEPTAR" />
+                <Button id="botonN" fx:id="botonN" layoutX="353.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="N" />
+                <Button id="botonZ" fx:id="botonZ" layoutX="204.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="Z" />
+                <Button id="botonB" fx:id="botonB" layoutX="324.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="B" />
+                <Button id="botonM" fx:id="botonM" layoutX="382.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="M" />
+                <Button id="botonV" fx:id="botonV" layoutX="293.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="V" />
+                <Button id="botonX" fx:id="botonX" layoutX="233.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="X" />
+                <Button id="botonC" fx:id="botonC" layoutX="263.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="C" />
+                <Button id="botonBorrar" fx:id="borrarBoton" layoutX="418.0" layoutY="90.0" mnemonicParsing="false" onAction="#borrarLetra" text="BORRAR" />
+
+
+            </children></AnchorPane>
+    </items>
+</SplitPane>
