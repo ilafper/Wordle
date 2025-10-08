@@ -7,15 +7,10 @@ import java.util.Set;
 
 public class Palabras {
 
-    // Lista de ejemplo (sin tildes). Amplía esta lista a tu gusto.
+    //lista de palabras.
     private static final String[] lista_palabras = {
-            "CASAS","PERRO","GATOS","LIMON","FRESA",
-            "ARBOL","LIBRO","LLAVE","PLANO","MANOS",
-            "SUELO","CIELO","MANGO","BOLSA","BOMBA",
-            "SILLA","MESAS","FUEGO","NIEVE","RUEDA",
-            "PUERTA","PAPEL","GRANO","NARAN","TERMO",
-            "BOTES","LARGO","CANTO","BEBER","SALAS",
-            "BRUTA","FINCA","CAMPO","BARCO","CARTA"
+            "CASAS","PERRO","GATOS","LIMON","FRESA"
+
     };
 
 

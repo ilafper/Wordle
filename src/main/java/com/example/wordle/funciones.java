@@ -2,12 +2,8 @@ package com.example.wordle;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class funciones {
 
@@ -45,7 +41,7 @@ public class funciones {
     private TextField[][] fila_Palabra;
     private int letraIndex = 0;
     private int intentoActual = 0;
-
+    private boolean juegoTerminado=false;
 
 
     @FXML
@@ -77,15 +73,12 @@ public class funciones {
         Button boton = (Button) event.getSource();
         String letra = boton.getText();
 
-
-
         // poner letra en mayúscula
         CombinacionLetras[letraIndex].setText(letra.toUpperCase());
         letraIndex++;
     }
 
     // FUNCION DE BORRAR LETRA.
-
     @FXML
     private void borrarLetra() {
         if (letraIndex <= 0) return;
@@ -101,51 +94,58 @@ public class funciones {
         }
     }
     @FXML
-    private void aceptarBoton(){
+    private void aceptarBoton() {
 
         // Construimos la palabra a partir de los TextFields
         StringBuilder PalabraCombinada = new StringBuilder();
         for (TextField letra : CombinacionLetras) {
-
             PalabraCombinada.append(letra.getText().toUpperCase());
         }
 
-        // Mostramos la palabra en consola
         System.out.println("Palabra ingresada: " + PalabraCombinada.toString());
-        System.out.println("Palabra Secreta: "+ palabraSecreta);
-        for (int i=0; i<5;i++){
+        System.out.println("Palabra Secreta: " + palabraSecreta);
 
-            TextField tf = fila_Palabra[intentoActual][i];
-
-            String letra = PalabraCombinada.substring(i, i + 1);
-            tf.setText(letra);
-            System.out.println("letra palabra ingresada: "+letra);
-            // Colorear según el resultado
-
-
-            System.out.println("desglose de la palabra secreta: "+ palabraSecreta.charAt(i));
-            if (letra.equals(letra.valueOf(palabraSecreta.charAt(i)))) {
-                tf.setStyle("-fx-background-color: green; -fx-text-fill: white;");
-            } else if (palabraSecreta.contains(letra)) {
-                tf.setStyle("-fx-background-color: gold; -fx-text-fill: black;");
-            } else {
-                tf.setStyle("-fx-background-color: grey; -fx-text-fill: white;");
-            }
-
-
-
+        if (PalabraCombinada.length()<5){
+            System.out.println("la palabra enviada tiene menos de 5 letras ");
+            return;
         }
 
 
 
-//        if (palabraSecreta.equals(PalabraCombinada)){
-//            System.out.println("palabra correcta");
-//
-//        }else {
-//            System.out.println("no es correcta");
-//        }
+        if (intentoActual < fila_Palabra.length) {
+            // procesar fila actual
+            for (int i = 0; i < 5; i++) {
 
+                TextField cuadradito = fila_Palabra[intentoActual][i];
+                String letra = PalabraCombinada.substring(i, i + 1);
+                cuadradito.setText(letra);
+
+                if (letra.equals(String.valueOf(palabraSecreta.charAt(i)))) {
+                    cuadradito.setStyle("-fx-background-color: green; -fx-text-fill: white;");
+                } else if (palabraSecreta.contains(letra)) {
+                    cuadradito.setStyle("-fx-background-color: gold; -fx-text-fill: black;");
+                } else {
+                    cuadradito.setStyle("-fx-background-color: grey; -fx-text-fill: white;");
+                }
+            }
+
+            limpiarInputs();
+            letraIndex = 0;
+            intentoActual++; // mover a la siguiente fila
+            System.out.println("intentos que llevo: " + intentoActual);
+
+            if (palabraSecreta.equals(PalabraCombinada.toString())){
+                System.out.println("Aacertaste la palabra, por lo tanto ganaste, pero me ofende");
+                System.out.println("palabra secreta: "+ palabraSecreta + "     " +" palabra que meti: "+PalabraCombinada);
+                juegoTerminado=true;
+            }else{
+
+            }
+        } else {
+            System.out.println("Se acabaron los intentos, perdiste");
+        }
     }
+
 
 
 }
