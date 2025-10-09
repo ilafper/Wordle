@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="279.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.MensajeControlador">
+   <children>
+      <Label fx:id="mensajeLabel" layoutX="57.0" layoutY="119.0" prefHeight="41.0" prefWidth="227.0" text="" />
+   </children>
+</AnchorPane>
