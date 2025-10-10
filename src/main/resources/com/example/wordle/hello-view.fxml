@@ -76,15 +76,15 @@
                 <Button id="botonÑ" fx:id="botonÑ" layoutX="426.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="Ñ" />
                 <Button id="botonL" fx:id="botonL" layoutX="395.0" layoutY="55.0" mnemonicParsing="false" onAction="#manejarLetra" text="L" />
 
-                <Button id="botonAceptar" fx:id="botonAceptar" layoutX="134.0" layoutY="90.0" mnemonicParsing="false" onAction="#aceptarBoton" text="ACEPTAR" />
-                <Button id="botonN" fx:id="botonN" layoutX="353.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="N" />
-                <Button id="botonZ" fx:id="botonZ" layoutX="204.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="Z" />
-                <Button id="botonB" fx:id="botonB" layoutX="324.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="B" />
-                <Button id="botonM" fx:id="botonM" layoutX="382.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="M" />
-                <Button id="botonV" fx:id="botonV" layoutX="293.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="V" />
-                <Button id="botonX" fx:id="botonX" layoutX="233.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="X" />
-                <Button id="botonC" fx:id="botonC" layoutX="263.0" layoutY="90.0" mnemonicParsing="false" onAction="#manejarLetra" text="C" />
-                <Button id="botonBorrar" fx:id="borrarBoton" layoutX="418.0" layoutY="90.0" mnemonicParsing="false" onAction="#borrarLetra" text="BORRAR" />
+                <Button id="botonAceptar" fx:id="botonAceptar" layoutX="132.0" layoutY="82.0" mnemonicParsing="false" onAction="#aceptarBoton" text="ACEPTAR" />
+                <Button id="botonN" fx:id="botonN" layoutX="351.0" layoutY="82.0" mnemonicParsing="false" onAction="#manejarLetra" text="N" />
+                <Button id="botonZ" fx:id="botonZ" layoutX="202.0" layoutY="82.0" mnemonicParsing="false" onAction="#manejarLetra" text="Z" />
+                <Button id="botonB" fx:id="botonB" layoutX="322.0" layoutY="82.0" mnemonicParsing="false" onAction="#manejarLetra" text="B" />
+                <Button id="botonM" fx:id="botonM" layoutX="380.0" layoutY="82.0" mnemonicParsing="false" onAction="#manejarLetra" text="M" />
+                <Button id="botonV" fx:id="botonV" layoutX="291.0" layoutY="82.0" mnemonicParsing="false" onAction="#manejarLetra" text="V" />
+                <Button id="botonX" fx:id="botonX" layoutX="231.0" layoutY="82.0" mnemonicParsing="false" onAction="#manejarLetra" text="X" />
+                <Button id="botonC" fx:id="botonC" layoutX="261.0" layoutY="82.0" mnemonicParsing="false" onAction="#manejarLetra" text="C" />
+                <Button id="botonBorrar" fx:id="borrarBoton" layoutX="416.0" layoutY="82.0" mnemonicParsing="false" onAction="#borrarLetra" text="BORRAR" />
 
 
             </children></AnchorPane>

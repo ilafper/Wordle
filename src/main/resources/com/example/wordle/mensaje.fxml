@@ -3,8 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="279.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.MensajeControlador">
+<AnchorPane prefHeight="279.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.MensajeControlador" >
    <children>
-      <Label fx:id="mensajeLabel" layoutX="57.0" layoutY="119.0" prefHeight="41.0" prefWidth="227.0" text="" />
+      <Label fx:id="mensajeLabel" layoutX="67.0" layoutY="68.0" prefHeight="41.0" prefWidth="227.0" text="" />
+      <Button layoutX="136.0" layoutY="164.0" onAction="#reiniciar" mnemonicParsing="false" text="Reiniciar" />
    </children>
 </AnchorPane>

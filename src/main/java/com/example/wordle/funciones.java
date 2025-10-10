@@ -2,6 +2,7 @@ package com.example.wordle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,8 +14,14 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class funciones {
+    private static funciones instance;
+    public static funciones getInstance(){
+        return instance;
+    }
 
     //recoger los textField que forman las palabras.
 
@@ -182,19 +189,21 @@ public class funciones {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("mensaje.fxml"));
             Stage stage = new Stage();
+
             Scene scene = new Scene(fxmlLoader.load(), 300, 300);
             stage.setTitle("Modal!");
             // Obtener el controlador del modal
             MensajeControlador mensajePerso = fxmlLoader.getController();
             mensajePerso.setMensaje(mensaje);
             stage.setScene(scene);
-            stage.initModality(Modality.APPLICATION_MODAL); // <-- hace que sea un modal
-            stage.showAndWait(); // bloquea hasta que se cierre
+            stage.initModality(Modality.APPLICATION_MODAL); //
+            stage.showAndWait();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 
 
