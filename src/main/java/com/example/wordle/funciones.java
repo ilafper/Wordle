@@ -160,7 +160,7 @@ public class funciones {
             }
         }
 
-        // Si acertó toda la palabraaaa
+        // Si acertó toda la palabraaaaa
         if (palabraSecreta.equals(PalabraCombinada.toString())) {
             //recoger el valor del campo pasarlo a numeo, operar y mostrar de nuevo.
             int ganadas = Integer.parseInt(Pganadas.getText());
