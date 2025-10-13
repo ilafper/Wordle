@@ -44,10 +44,13 @@
                             </children></AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="231.0" prefWidth="212.0">
                             <children>
-                                <TextField layoutX="35.0" layoutY="14.0" prefHeight="31.0" prefWidth="157.0" text="ESTADISTICAS:" />
-                                <Label layoutX="26.0" layoutY="68.0" prefHeight="25.0" prefWidth="99.0" text="Partidas Juagadas:" textAlignment="CENTER" />
-                                <Label layoutX="26.0" layoutY="93.0" prefHeight="25.0" prefWidth="62.0" text="Ganadas:" textAlignment="CENTER" />
-                                <Label layoutX="26.0" layoutY="118.0" prefHeight="25.0" prefWidth="53.0" text="Perdidas:" textAlignment="CENTER" />
+                                <TextField  layoutX="35.0" layoutY="14.0" prefHeight="31.0" prefWidth="157.0" text="ESTADISTICAS:" />
+                                <Label  layoutX="26.0" layoutY="68.0" prefHeight="25.0" prefWidth="99.0" text="Partidas Juagadas:" textAlignment="CENTER" />
+                                <Label  layoutX="26.0" layoutY="93.0" prefHeight="25.0" prefWidth="62.0" text="Ganadas:" textAlignment="CENTER" />
+                                <Label  layoutX="26.0" layoutY="118.0" prefHeight="25.0" prefWidth="53.0" text="Perdidas:" textAlignment="CENTER" />
+                        <Label fx:id="Pjugagas" id="jugadas" layoutX="131.0" layoutY="68.0" prefHeight="25.0" prefWidth="35.0" text="0" />
+                        <Label fx:id="Pganadas" id="ganadas" layoutX="79.0" layoutY="93.0" prefHeight="25.0" prefWidth="35.0" text="0" />
+                        <Label fx:id="Pperdidas" id="perdidas" layoutX="79.0" layoutY="118.0" prefHeight="25.0" prefWidth="35.0" text="0" />
                             </children></AnchorPane>
                     </items>
                 </SplitPane>

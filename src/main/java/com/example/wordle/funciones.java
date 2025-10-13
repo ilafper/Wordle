@@ -30,6 +30,10 @@ public class funciones {
     @FXML private TextField input3;
     @FXML private TextField input4;
     @FXML private TextField input5;
+    //contadores.
+    @FXML private Label Pjugagas;
+    @FXML private Label Pganadas;
+    @FXML private Label Pperdidas;
 
     // cada huevo de los intentos.
 
@@ -68,7 +72,7 @@ public class funciones {
     @FXML
     public void initialize() {
 
-        //RECOGEMOS LASLETRAS PARA FORMAR LA PALABRA.
+        //RECOGEMOS LAS LETRAS PARA FORMAR LA PALABRA.
         CombinacionLetras = new TextField[]{ input1, input2, input3, input4, input5 };
         //crear un array bidimensional, de 4 x 5 , 2 palabras de 5 huecos cada una.
         fila_Palabra = new TextField[4][5];
@@ -84,10 +88,7 @@ public class funciones {
         //seleccionar una palabra aleatoria del array
         palabraSecreta = palabras.palabraAleatoria().toUpperCase();
 
-
         System.out.println("Palabra secreta (shhhh....🤫): " + palabraSecreta);
-
-
 
     }
 
@@ -161,9 +162,20 @@ public class funciones {
 
         // Si acertó toda la palabra
         if (palabraSecreta.equals(PalabraCombinada.toString())) {
+            //recoger el valor del campo pasarlo a numeo, operar y mostrar de nuevo.
+            int ganadas = Integer.parseInt(Pganadas.getText());
+            ganadas++;
+            Pganadas.setText(String.valueOf(ganadas));
+
+            int jugadas= Integer.parseInt(Pjugagas.getText());
+            jugadas++;
+            Pjugagas.setText(String.valueOf(jugadas));
+
+
             String mensaje="Me jode, pero has acertado!";
             System.out.println("Me jode, pero has acertado!");
             ventana1(mensaje); // muestra modal de victoria
+
             return;
         }
 
@@ -174,34 +186,63 @@ public class funciones {
 
         System.out.println("Intentos usados: " + intentoActual);
         if (intentoActual >= 4) {
+            int perdidas = Integer.parseInt(Pperdidas.getText());
+            perdidas++;
+            Pperdidas.setText(String.valueOf(perdidas));
             String mensaje="Se acabaron los intentos, perdiste";
             System.out.println("Se acabaron los intentos, perdiste");
             ventana1(mensaje); // muestra el modal
+
             return;
         }
     }
 
     @FXML
     private Label mensajeLabel;
-
+    //modal pestaña fin
     private void ventana1(String mensaje) {
         try {
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("mensaje.fxml"));
-            Stage stage = new Stage();
+            Parent root = fxmlLoader.load();
 
-            Scene scene = new Scene(fxmlLoader.load(), 300, 300);
-            stage.setTitle("Modal!");
-            // Obtener el controlador del modal
+            // 🔹 Obtener el controlador del modal
             MensajeControlador mensajePerso = fxmlLoader.getController();
             mensajePerso.setMensaje(mensaje);
-            stage.setScene(scene);
-            stage.initModality(Modality.APPLICATION_MODAL); //
+            mensajePerso.setControladorPrincipal(this); //Aquí pasamos la referencia del juego
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root, 300, 300));
+            stage.setTitle("Modal!");
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void reiniciarJuego() {
+        //Limpiar las letras del tablero
+        for (TextField[] cada_fila : fila_Palabra) {
+            for (TextField cada_letra : cada_fila) {
+                cada_letra.setText("");
+                cada_letra.setStyle(""); // limpia colores
+            }
+        }
+
+        // Limpiar los campos de entrada por el teclado.
+        for (TextField cada_letra : CombinacionLetras) {
+            cada_letra.setText("");
+            cada_letra.setStyle("");
+        }
+        //reseter el contador de fallos y el numero de letras.
+        numerosDeLetras = 0;
+        intentoActual = 0;
+        //Nueva palabra secreta
+        palabraSecreta = palabras.palabraAleatoria().toUpperCase();
+        System.out.println("Nueva palabra secreta: " + palabraSecreta);
+
+        System.out.println("Juego reiniciados");
     }
 
 

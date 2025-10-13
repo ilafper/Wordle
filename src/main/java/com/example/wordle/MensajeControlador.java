@@ -9,18 +9,15 @@ public class MensajeControlador {
     @FXML
     private Label mensajeLabel;
 
-
-    // Instancia de la clase funciones
-    private funciones funciones = new funciones(); // ✅ forma correcta
-
-
-    // referencia al controlador principal
-
+    private funciones controladorPrincipal; // referencia al controlador principal
 
     public void setMensaje(String mensaje) {
         mensajeLabel.setText(mensaje);
     }
 
+    public void setControladorPrincipal(funciones controlador) {
+        this.controladorPrincipal = controlador;
+    }
 
     @FXML
     private void cerrar() {
@@ -30,9 +27,10 @@ public class MensajeControlador {
 
     @FXML
     private void reiniciar() {
-        System.out.println("hola");
-        funciones.initialize();
+        if (controladorPrincipal != null) {
+            controladorPrincipal.reiniciarJuego();
+        }
+        System.out.println("pulsar boton reiniciar");
+        cerrar();
     }
-
-
 }
