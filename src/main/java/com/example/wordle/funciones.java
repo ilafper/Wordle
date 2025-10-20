@@ -122,6 +122,7 @@ public class funciones {
         numerosDeLetras--;
         CombinacionLetras[numerosDeLetras].setText("");
     }
+
     //limpiar la letra del TEXTFIELD de añadir
     @FXML
     private void limpiarLetra() {

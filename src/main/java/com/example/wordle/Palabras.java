@@ -26,8 +26,8 @@ public class Palabras {
     // Devuelve una palabra aleatoria (en mayúsculas).
 
     public String palabraAleatoria() {
-        Random r = new Random();
-        return lista_palabras[r.nextInt(lista_palabras.length)];
+        Random palabraAleatoria = new Random();
+        return lista_palabras[palabraAleatoria.nextInt(lista_palabras.length)];
     }
 
     // Comprueba si la palabra es válida (está en la lista)
