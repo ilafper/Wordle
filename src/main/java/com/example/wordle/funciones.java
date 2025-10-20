@@ -122,7 +122,7 @@ public class funciones {
         numerosDeLetras--;
         CombinacionLetras[numerosDeLetras].setText("");
     }
-    //limpiar la letra del TEXTFIELD
+    //limpiar la letra del TEXTFIELD de añadir
     @FXML
     private void limpiarLetra() {
         for (TextField letra : CombinacionLetras){
@@ -197,8 +197,6 @@ public class funciones {
         }
     }
 
-    @FXML
-    private Label mensajeLabel;
     //modal pestaña fin
     private void ventana1(String mensaje) {
         try {
