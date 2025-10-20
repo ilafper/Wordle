@@ -30,11 +30,4 @@ public class Palabras {
         return lista_palabras[palabraAleatoria.nextInt(lista_palabras.length)];
     }
 
-    // Comprueba si la palabra es válida (está en la lista)
-    public boolean esPalabraValida(String intento) {
-        if (intento == null) return false;
-        return setPalabras.contains(intento.toUpperCase());
-    }
-
-
 }
